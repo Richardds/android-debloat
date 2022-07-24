@@ -1,0 +1,4 @@
+backup/*.apk
+install/*.apk
+*.txt
+*.ab
