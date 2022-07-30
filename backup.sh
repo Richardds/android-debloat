@@ -2,8 +2,7 @@
 
 set -e
 
-for APP in $(./pm.sh list packages -3 -f)
-do
+for APP in $(./pm.sh list packages -3 -f); do
   APP_PATH="$(sed -nr 's/package:(.+)\/base.apk=.+$/\1\/base.apk/p' <<< "${APP}")"
   APP_ID="$(sed -nr 's/package:.+\/base.apk=(.+)$/\1/p' <<< "${APP}")"
 

@@ -13,7 +13,7 @@ fi
 
 ./update.sh
 
-comm -12 installed.txt "${LIST_PATH}" | while read PACKAGE; do
+for PACKAGE in $(comm -12 installed.txt "${LIST_PATH}"); do
     printf "\n=== %s ===\n" "${PACKAGE}"
     ./uninstall.sh "${PACKAGE}"
 done
