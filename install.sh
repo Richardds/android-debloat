@@ -19,7 +19,7 @@ else
 fi
 
 if [ -f "${APK_PATH}" ]; then
-    ./adb.sh install "${APK_PATH}"
+    ./adb.sh install -r -d "${APK_PATH}"
 else
     >&2 echo "Package '${PACKAGE}' of version code '${VERSION_CODE}' not found."
     exit 2
