@@ -4,4 +4,4 @@
 # Android package manager
 #
 
-./adb.sh shell pm $@
+./shell.sh pm $@
